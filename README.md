@@ -1,40 +1,37 @@
-# banka_otomasyonu
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-
-
-int main( void )
-{
-	int kullanici;
-	printf("Lutfen ne tur bir kullanici oldugunuzu giriniz: ");
-	printf("1-MUSTERI\n2-YONETICI");
-
-	scanf("%d",&kullanici);
-	switch( kullanici ) {
-        case 1:
-printf("sayin musterimiz hosgeldiniz");
-
-		case 2:
-		    printf("sayin yoneticimiz hosgeldiniz");
-
-
-	}
-
-	return 0;
-}
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<math.h>
+#include<time.h>
+
+
+int KullaniciSor(  )
+{
+	int kullanici;
+	int a;
+
+	printf("Lutfen ne tur bir kullanici oldugunuzu giriniz: \n");
+	printf("1-MUSTERI\n2-YONETICI\n");
+	scanf("%d",&kullanici);
+
+
+
+	switch( kullanici ) {
+        case 1:
+            printf("Sayin musterimiz hosgeldiniz\n");
+            break;
+
+		case 2:
+		    printf("Sayin yoneticimiz hosgeldiniz\n");
+		    break;
+        default :
+        printf("Hatali tuslama yaptiniz\n");
+
+	}
+
+
+	return 0;
+}
 
 int main()
 {
@@ -43,6 +40,12 @@ int gecici_no,gecici_sifre=1,secim,deneme_sifre1,param ;
 int top_param=0, deneme_sifre2,gecici_sifre1;
 int para_cek;
 char harf,harf2;
+int kullanici ;
+
+
+
+
+KullaniciSor(kullanici);
 
 
 baslangic_noktasi:
@@ -78,7 +81,7 @@ goto baslangic_noktasi;
 printf("\n\tsifrenizi giriniz: ");
 scanf("%d",&gecici_sifre);
 sayac++;
-}  
+}
 
 
 while(secim!=5)
@@ -117,7 +120,7 @@ scanf("%d",&param);
 top_param+=param;
 printf("\tParaniz Hesabiniza Yatirilmistir.\n");
 printf("\tHesabinizdaki Para: %d\n",top_param);
-} 
+}
 if(secim==3)
 {
 
@@ -145,9 +148,9 @@ printf("\tCekilen tutar %d Bankaya %d borclandiniz.\n",para_cek,top_param);
 break;
 case 'h':
 case 'H': printf("\tisleminiz iptal Olmustur..\n");
-} 
 }
-} 
+}
+}
 if(secim==4)
 {
 printf("\tBanka Hesap Numaraniz: %d\n",hesap_no1);
@@ -163,7 +166,7 @@ printf("\t\tHOSCAKALiN...!!!\n");
 
 
 
-if(gecici_no==hesap_no2) 
+if(gecici_no==hesap_no2)
 {
 while(gecici_sifre!=sifre2)
 {
@@ -177,7 +180,7 @@ goto baslangic_noktasi;
 printf("sifrenizi giriniz\n");
 scanf("%d",&gecici_sifre);
 sayac++;
-} 
+}
 
 
 while(secim!=5)
@@ -216,7 +219,7 @@ scanf("%d",&param);
 top_param+=param;
 printf("Paraniz Hesabiniza Yatirilmistir.\n");
 printf("Hesabinizdaki Para: %d\n",top_param);
-} 
+}
 if(secim==3)
 {
 
@@ -247,14 +250,14 @@ case 'H': printf("isleminiz iptal Olmustur..\n");
 }
 
 }
-} 
+}
 if(secim==4)
 {
 printf("Banka Hesap Numaraniz: %d\n",hesap_no2);
 printf("Bakiyeniz: %d",top_param);
 }
 if(secim==5)
-printf("HOSCAKALiN...!!!\n");
+printf("HOSCAKALIN...!!!\n");
 
 }
 }
